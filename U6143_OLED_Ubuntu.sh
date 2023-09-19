@@ -19,12 +19,12 @@ sudo dpkg -i /tmp/raspi-config_20230214_all.deb
 # Clean up downloaded package
 rm /tmp/raspi-config_20230214_all.deb
 
-echo "Raspi-config installation completed."
+echo "***Raspi-config installation completed.***"
 
 # Enable I2C interface
 sudo raspi-config nonint do_i2c 0
 
-echo "I2C has been enabled via raspi-config."
+echo "***I2C has been enabled via raspi-config.***"
 
 # Change directory to home/ubuntu
 cd /home/ubuntu
@@ -33,7 +33,7 @@ cd /home/ubuntu
 
 git clone https://github.com/UCTRONICS/U6143_ssd1306.git
 
-echo "Git repo has been downloaded."
+echo "***Repo has been downloaded.***"
 
 cd U6143_ssd1306/C
 
@@ -50,7 +50,7 @@ Alias=rc-local.service"
 file_path="/lib/systemd/system/rc-local.service"
 
 echo "$lines_to_add" | sudo tee -a "$file_path" > /dev/null
-echo "Lines added to $file_path."
+echo "***Lines added to $file_path.***"
 
 # Create and add command to rc.local file
 
@@ -65,7 +65,7 @@ sudo ./display &"
 file_path0="/etc/rc.local"
 
 echo "$lines_to_add0" | sudo tee -a "$file_path0" > /dev/null
-echo "Lines added to $file_path0."
+echo "***Lines added to $file_path0.***"
 
 # Make rc.local executable
 
@@ -76,5 +76,7 @@ sudo chmod +x /etc/rc.local
 sudo ln -s /lib/systemd/system/rc-local.service /etc/systemd/system/
 
 # Restart host
+
+echo "***Finished***"
 
 sudo shutdown -r
