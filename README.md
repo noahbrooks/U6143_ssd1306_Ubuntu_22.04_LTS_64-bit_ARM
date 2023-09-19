@@ -4,7 +4,13 @@ This bash script will install/configure all needed dependencies, files, etc. to 
 
 -----------------------------------------
 
-Download the script and run `sudo ./U6143_OLED_Ubuntu.sh`.
+To download and execute the script, enter the following commands: 
+
+Download the script `git clone https://github.com/noahbrooks/U6143_ssd1306_Ubuntu_22.04_LTS_64-bit_ARM`.
+
+Make the script executable `sudo chmod +x U6143_ssd1306_Ubuntu_22.04_LTS_64-bit_ARM/U6143_OLED_Ubuntu.sh`.
+
+Run the script `sudo U6143_ssd1306_Ubuntu_22.04_LTS_64-bit_ARM/U6143_OLED_Ubuntu.sh`.
 
 Near the end of the script, you will need to briefly interact with a GUI by pressing TAB then ENTER.
 
